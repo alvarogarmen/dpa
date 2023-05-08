@@ -1,0 +1,3 @@
+C:/Users/alvar/CLionProjects/dpa/cmake-build-debug/CMakeFiles/dpa.dir
+C:/Users/alvar/CLionProjects/dpa/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/alvar/CLionProjects/dpa/cmake-build-debug/CMakeFiles/rebuild_cache.dir
