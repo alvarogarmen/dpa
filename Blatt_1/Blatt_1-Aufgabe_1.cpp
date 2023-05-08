@@ -32,23 +32,8 @@ double estimatePi(int numPoints) {
 
 int main() {
     std::ofstream outputFile;
-    outputFile.open("running_time.gp");  // Open file to write GNUplot commands
-
-    outputFile << "set xlabel 'Number of Points'\n";
-    outputFile << "set ylabel 'Running Time (seconds)'\n";
-    outputFile << "set title 'Running Time vs. Number of Points'\n";
-    outputFile << "set grid\n";
-    outputFile << "set terminal png\n";
-    outputFile << "set output 'running_time.png'\n";
-    outputFile << "plot 'running_time.csv' using 1:2 with linespoints pointtype 7 pointsize 1.5 title 'Running Time'\n";
-    outputFile << "quit\n";
-
-    outputFile.close();  // Close the file
-
-    // Calculate pi and record running time
-    std::ofstream dataFile;
-    dataFile.open("running_time.csv");
-    dataFile << "numPoints,runningTime\n";
+    outputFile.open("running_time.csv");  // Open file to write running time data
+    outputFile << "numPoints,runningTime\n";  // Write header for the CSV file
 
     for (int numPoints = 10000; numPoints <= 1000000; numPoints += 10000) {
         std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
@@ -58,14 +43,12 @@ int main() {
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
         std::chrono::duration<double> elapsedSeconds = end - begin;
 
-        dataFile << numPoints << "," << elapsedSeconds.count() << "\n";
+        outputFile << numPoints<<","<<elapsedSeconds.count() << "\n";
     }
 
-    dataFile.close();  // Close the data file
+    outputFile.close();  // Close the file
 
-    std::system("gnuplot running_time.gp");  // Execute the GNUplot script
-
-    std::cout << "Plot generated. Check running_time.png" << std::endl;
+    std::cout << "Running time data has been written to running_time.csv" << std::endl;
 
     return 0;
 }
