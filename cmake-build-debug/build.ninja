@@ -49,11 +49,17 @@ cmake_ninja_workdir = C$:/Users/alvar/CLionProjects/dpa/cmake-build-debug/
 
 build cmake_object_order_depends_target_dpa: phony || CMakeFiles/dpa.dir
 
-build CMakeFiles/dpa.dir/main.cpp.obj: CXX_COMPILER__dpa_Debug C$:/Users/alvar/CLionProjects/dpa/main.cpp || cmake_object_order_depends_target_dpa
-  DEP_FILE = CMakeFiles\dpa.dir\main.cpp.obj.d
+build CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_1.cpp.obj: CXX_COMPILER__dpa_Debug C$:/Users/alvar/CLionProjects/dpa/Blatt_1/Blatt_1-Aufgabe_1.cpp || cmake_object_order_depends_target_dpa
+  DEP_FILE = CMakeFiles\dpa.dir\Blatt_1\Blatt_1-Aufgabe_1.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\dpa.dir
-  OBJECT_FILE_DIR = CMakeFiles\dpa.dir
+  OBJECT_FILE_DIR = CMakeFiles\dpa.dir\Blatt_1
+
+build CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_2.cpp.obj: CXX_COMPILER__dpa_Debug C$:/Users/alvar/CLionProjects/dpa/Blatt_1/Blatt_1-Aufgabe_2.cpp || cmake_object_order_depends_target_dpa
+  DEP_FILE = CMakeFiles\dpa.dir\Blatt_1\Blatt_1-Aufgabe_2.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\dpa.dir
+  OBJECT_FILE_DIR = CMakeFiles\dpa.dir\Blatt_1
 
 
 # =============================================================================
@@ -63,7 +69,7 @@ build CMakeFiles/dpa.dir/main.cpp.obj: CXX_COMPILER__dpa_Debug C$:/Users/alvar/C
 #############################################
 # Link the executable dpa.exe
 
-build dpa.exe: CXX_EXECUTABLE_LINKER__dpa_Debug CMakeFiles/dpa.dir/main.cpp.obj
+build dpa.exe: CXX_EXECUTABLE_LINKER__dpa_Debug CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_1.cpp.obj CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_2.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\dpa.dir

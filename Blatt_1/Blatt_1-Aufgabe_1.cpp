@@ -6,6 +6,8 @@
 #include <cmath>
 #include <chrono>
 #include <random>
+#include <fstream>
+#include <string>
 
 double estimatePi(int numPoints) {
     //Set the parameters for the random distribution
@@ -29,24 +31,41 @@ double estimatePi(int numPoints) {
 }
 
 int main() {
-    // Number of generated points
-    int numPoints;
-    std::cout << "Enter the number of points: ";
-    std::cin >> numPoints;
+    std::ofstream outputFile;
+    outputFile.open("running_time.gp");  // Open file to write GNUplot commands
 
-    // Keep track of the time
-    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+    outputFile << "set xlabel 'Number of Points'\n";
+    outputFile << "set ylabel 'Running Time (seconds)'\n";
+    outputFile << "set title 'Running Time vs. Number of Points'\n";
+    outputFile << "set grid\n";
+    outputFile << "set terminal png\n";
+    outputFile << "set output 'running_time.png'\n";
+    outputFile << "plot 'running_time.csv' using 1:2 with linespoints pointtype 7 pointsize 1.5 title 'Running Time'\n";
+    outputFile << "quit\n";
 
-    // Call our function
-    double estimatedPi = estimatePi(numPoints);
+    outputFile.close();  // Close the file
 
-    // Calculate the time passed
-    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-    std::chrono::duration<double> elapsedSeconds = end - begin;
+    // Calculate pi and record running time
+    std::ofstream dataFile;
+    dataFile.open("running_time.csv");
+    dataFile << "numPoints,runningTime\n";
 
-    // Print out the result
-    std::cout << "Estimated value of Pi: " << estimatedPi << std::endl;
-    std::cout << "Elapsed time: " << elapsedSeconds.count() << " seconds" << std::endl;
+    for (int numPoints = 10000; numPoints <= 1000000; numPoints += 10000) {
+        std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+
+        double estimatedPi = estimatePi(numPoints);
+
+        std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+        std::chrono::duration<double> elapsedSeconds = end - begin;
+
+        dataFile << numPoints << "," << elapsedSeconds.count() << "\n";
+    }
+
+    dataFile.close();  // Close the data file
+
+    std::system("gnuplot running_time.gp");  // Execute the GNUplot script
+
+    std::cout << "Plot generated. Check running_time.png" << std::endl;
 
     return 0;
 }
