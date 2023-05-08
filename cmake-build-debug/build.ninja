@@ -61,6 +61,12 @@ build CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_2.cpp.obj: CXX_COMPILER__dpa_De
   OBJECT_DIR = CMakeFiles\dpa.dir
   OBJECT_FILE_DIR = CMakeFiles\dpa.dir\Blatt_1
 
+build CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Augabe_3.cpp.obj: CXX_COMPILER__dpa_Debug C$:/Users/alvar/CLionProjects/dpa/Blatt_1/Blatt_1-Augabe_3.cpp || cmake_object_order_depends_target_dpa
+  DEP_FILE = CMakeFiles\dpa.dir\Blatt_1\Blatt_1-Augabe_3.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\dpa.dir
+  OBJECT_FILE_DIR = CMakeFiles\dpa.dir\Blatt_1
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target dpa
@@ -69,7 +75,7 @@ build CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_2.cpp.obj: CXX_COMPILER__dpa_De
 #############################################
 # Link the executable dpa.exe
 
-build dpa.exe: CXX_EXECUTABLE_LINKER__dpa_Debug CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_1.cpp.obj CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_2.cpp.obj
+build dpa.exe: CXX_EXECUTABLE_LINKER__dpa_Debug CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_1.cpp.obj CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_2.cpp.obj CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Augabe_3.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\dpa.dir

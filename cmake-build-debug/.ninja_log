@@ -1,9 +1,6 @@
 # ninja log v5
 3	697	7052428227640381	CMakeFiles/dpa.dir/main.cpp.obj	a086fa0a28aa8e39
 699	820	7052428228812697	dpa.exe	84b4a70c593858b7
-8	741	7052435404772761	CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_2.cpp.obj	52767295bdec22e3
-0	745	7052435404772761	CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_1.cpp.obj	f7d74efada5f435d
-0	12	0	clean	3ac1ac369df1e668
 12	779	7052450491458856	CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_2.cpp.obj	52767295bdec22e3
-5	844	7052450492113554	CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_1.cpp.obj	f7d74efada5f435d
+0	12	0	clean	3ac1ac369df1e668
 8	820	7052500698837352	CMakeFiles/dpa.dir/Blatt_1/Blatt_1-Aufgabe_1.cpp.obj	f7d74efada5f435d
