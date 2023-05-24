@@ -4,8 +4,8 @@
 #include <fstream>
 #include <mpi.h>
 
-#define VECTOR_SIZE 1000000
-#define NUM_TESTS 10
+#define VECTOR_SIZE 10
+#define NUM_TESTS 100
 
 void my_broadcast(std::vector<int>& data, int root, MPI_Comm communicator) {
     int rank, size;
