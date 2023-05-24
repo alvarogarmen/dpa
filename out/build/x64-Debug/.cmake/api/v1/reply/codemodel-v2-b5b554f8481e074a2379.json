@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "dpa",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "MY_PROJECT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MY_PROJECT-Debug-e464d93689c8a6cef2f0.json",
+					"name" : "MY_PROJECT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "dpa::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-dpa-Debug-784ffc3ed0d2dfc4b71e.json",
+					"jsonFile" : "target-dpa-Debug-f131203c40a935b8b245.json",
 					"name" : "dpa",
 					"projectIndex" : 0
 				}
@@ -49,7 +58,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/alvar/CLionProjects/dpa/cmake-build-debug",
+		"build" : "C:/Users/alvar/CLionProjects/dpa/out/build/x64-Debug",
 		"source" : "C:/Users/alvar/CLionProjects/dpa"
 	},
 	"version" : 
