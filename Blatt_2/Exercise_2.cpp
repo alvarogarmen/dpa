@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
 
     std::ofstream outfile;
     if (rank == 0) {
-        outfile.open("broadcast_times.csv");
+        outfile.open("broadcast_times_exercise2.csv");
         outfile << "Vector Size, Broadcast Time (seconds)\n";
     }
 
