@@ -43,11 +43,11 @@ int main(int argc, char** argv) {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int> dist(0, 100);
-
-    std::ofstream outfile;
+    // I commented out the lines that store the data
+    //std::ofstream outfile;
     if (rank == 0) {
-        outfile.open("broadcast_times_exercise2.csv");
-        outfile << "Vector Size, Broadcast Time (seconds)\n";
+        //outfile.open("broadcast_times_exercise2.csv");
+        //outfile << "Vector Size, Broadcast Time (seconds)\n";
     }
 
     for (int i = 0; i < NUM_TESTS; ++i) {
@@ -72,15 +72,16 @@ int main(int argc, char** argv) {
             start_time = MPI_Wtime();
         }
         binomial_tree_broadcast(vector, 0, MPI_COMM_WORLD);
+        //This is for storing the elapsed timegi
         if (rank == 0) {
             end_time = MPI_Wtime();
             double elapsed_time = end_time - start_time;
-            outfile << curr_vector_size << ", " << elapsed_time << "\n";
+            //outfile << curr_vector_size << ", " << elapsed_time << "\n";
         }
     }
 
     if (rank == 0) {
-        outfile.close();
+        //outfile.close();
     }
 
     MPI_Finalize();

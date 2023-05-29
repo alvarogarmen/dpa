@@ -37,10 +37,10 @@ int main(int argc, char** argv) {
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int> dist(0, 100);
 
-    std::ofstream outfile;
+    //std::ofstream outfile;
     if (rank == 0) {
-        outfile.open("broadcast_times.csv");
-        outfile << "Vector Size, Broadcast Time (seconds)\n";
+        //outfile.open("broadcast_times.csv");
+        //outfile << "Vector Size, Broadcast Time (seconds)\n";
     }
 
     for (int i = 0; i < NUM_TESTS; ++i) {
@@ -68,7 +68,7 @@ int main(int argc, char** argv) {
         if (rank == 0) {
             end_time = MPI_Wtime();
             double elapsed_time = end_time - start_time;
-            outfile << curr_vector_size << ", " << elapsed_time << "\n";
+            //outfile << curr_vector_size << ", " << elapsed_time << "\n";
         }
     }
 
